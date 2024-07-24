@@ -1,0 +1,4 @@
+br\com\fsdney\domain\Curso.class
+br\com\fsdney\domain\Matricula.class
+br\com\fsdney\dao\CursoDao.class
+br\com\fsdney\dao\ICursoDao.class
