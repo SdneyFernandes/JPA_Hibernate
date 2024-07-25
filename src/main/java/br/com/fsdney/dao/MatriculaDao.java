@@ -1,31 +1,32 @@
+/**
+ * 
+ */
 package br.com.fsdney.dao;
+
+import br.com.fsdney.domain.Matricula;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import br.com.fsdney.domain.Curso;
 
-
-import br.com.fsdney.domain.Curso;
-
-public class CursoDao implements ICursoDao {
+/**
+ * 
+ */
+public class MatriculaDao implements IMatriculaDao {
 
 	@Override
-	public Curso cadastrar(Curso curso) {
-		
+	public Matricula cadastrar(Matricula mat) {
 		EntityManagerFactory entityManagerFactory = 
 				Persistence.createEntityManagerFactory("Hibernate");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		
 		entityManager.getTransaction().begin();
-		entityManager.persist(curso);
+		entityManager.persist(mat);
 		entityManager.getTransaction().commit();
 		 
 		entityManager.close();
 		entityManagerFactory.close();
-		
-		
-		return curso;
+		return mat;
 	}
 
 }

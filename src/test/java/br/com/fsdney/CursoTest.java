@@ -18,9 +18,9 @@ public class CursoTest {
 	@Test
 	public void cadastrar() {
 		Curso curso = new Curso();
-		curso.setCodigo("A1");
-		curso.setDescricao("Curso Teste");
-		curso.setNome("Curso de Java Backend");
+		curso.setCodigo("A2");
+		curso.setDescricao("Curso Matematica");
+		curso.setNome("Curso de Funções");
 		curso = cursoDao.cadastrar(curso);
 		
 		assertNotNull(curso);
